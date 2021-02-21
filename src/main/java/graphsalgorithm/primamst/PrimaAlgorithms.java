@@ -1,6 +1,4 @@
 package graphsalgorithm.primamst;
-
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class PrimaAlgorithms {
@@ -22,6 +20,7 @@ public class PrimaAlgorithms {
             }
 
             start.setVisited(true);
+
             if (!min.isEmpty()) {
                 Edge curentEdge = Collections.min(min);
                 mst.add(curentEdge);
@@ -30,7 +29,6 @@ public class PrimaAlgorithms {
                 start = null;
             }
         }
-
         for (Vertex v : vertexes) {
             List<Edge> min = new ArrayList<>();
             if (v.getVisited() == true) {
@@ -44,7 +42,6 @@ public class PrimaAlgorithms {
                     }
                 }
             }
-
             v.setVisited(true);
             if (!min.isEmpty()) {
                 mst.add(Collections.min(min));
